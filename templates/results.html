@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+    <link href="{{ url_for('static', filename='styles.css') }}" type="text/css" rel="stylesheet">
+</head>
+<body>
+{% if page %}
+  <h1>Summary </h1>
+    <p>{{ page.summary }}</p>
+    <p><a href="{{ page.url }}"> {{ page.title }}</a> </p>
+{% else %}
+  <h1>Error</h1>
+{% endif %}
+</body>
+</html>
