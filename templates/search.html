@@ -1,13 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Search Wikipedia</title>
-</head>
-<body>
+{% extends "layout.html" %}
+{% block title %}Search Wikipedia{% endblock %}
+{% block content %}
 <form method="post" action="">
     <p><label>Search: <input type="text" id="search" name="search"></label></p>
     <p><input type="submit" id="submit" value="Search"></p>
 </form>
-</body>
-</html>
+{% endblock %}

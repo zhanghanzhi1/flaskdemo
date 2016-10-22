@@ -1,17 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Results</title>
-    <link href="{{ url_for('static', filename='styles.css') }}" type="text/css" rel="stylesheet">
-</head>
-<body>
+{% extends "layout.html" %}
+{% block title %}Wikipedia Results{% endblock %}
+{% block content %}
 {% if page %}
-  <h1>Summary </h1>
+{#    TODO: add page title and more... #}
+
+  <h2>Summary </h2>
     <p>{{ page.summary }}</p>
     <p><a href="{{ page.url }}"> {{ page.title }}</a> </p>
 {% else %}
   <h1>Error</h1>
 {% endif %}
-</body>
-</html>
+{% endblock %}
