@@ -2,13 +2,8 @@ from flask import Flask, render_template, request, redirect, url_for, session
 import wikipedia
 
 app = Flask(__name__)
-# set the secret key.  keep this really secret:
-app.secret_key = 'A0Zr98j/3yXa R~XHH!jmN]LWX/,?RT'
-
-
-@app.route('/test')
-def test():
-    return 'Hello World!'
+# Set the secret key. Keep this really secret:
+app.secret_key = 'IT@JCUA0Zr98j/3yXa R~XHH!jmN]LWX/,?RT'
 
 
 @app.route('/')
@@ -19,12 +14,6 @@ def home():
 @app.route('/about')
 def about():
     return "I am still working on this"
-
-
-@app.route('/hello')
-@app.route('/hello/<name>')
-def hello(name=None):
-    return render_template("hello.html", name=name)
 
 
 @app.route('/search', methods=['POST', 'GET'])
